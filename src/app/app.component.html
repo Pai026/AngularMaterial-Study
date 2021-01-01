@@ -1,7 +1,17 @@
-<mat-toolbar color = "primary" class="navbar">
-  <div>Abhiram R Pai</div>
-  <div>
-    <span>Home</span>
-    <span>About</span>
-  </div>
-</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav [(opened)]="opened">SideNav</mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color = "primary" class="navbar">
+      <button (click)="opened=!opened" mat-icon-button color="primary" aria-label="Example icon button with a menu icon">
+        <mat-icon color="accent" aria-hidden="false" aria-label="Example home icon">menu</mat-icon>
+      </button>
+      <div>Abhiram R Pai</div>
+      <div>
+        <span>Home</span>
+        <span>About</span>
+      </div>
+    </mat-toolbar>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
